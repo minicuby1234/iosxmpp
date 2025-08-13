@@ -65,6 +65,11 @@ struct ChatView: View {
         .sheet(isPresented: $showingCallSheet) {
             VoiceCallView(contact: contact, callManager: voiceCallManager)
         }
+        .onAppear {
+            if let xmppStream = xmppManager.xmppStream {
+                omemoManager.activate(with: xmppStream)
+            }
+        }
     }
     
     private func sendMessage() {

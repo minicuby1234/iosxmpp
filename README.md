@@ -1,15 +1,15 @@
 # iOS XMPP Client
 
-A clean, simple iOS XMPP messaging client built with SwiftUI and Material 3 design principles.
+A clean, simple iOS XMPP messaging client built with SwiftUI and Material 3 design principles, featuring real XMPP connectivity, OMEMO encryption, and WebRTC voice calling.
 
 ## Features
 
-- **Multi-server XMPP Login**: Connect to any XMPP server using your existing credentials
+- **Real XMPP Connectivity**: Connect to any XMPP server using XMPPFramework
 - **Material 3 Design**: Clean, modern UI following Google's Material Design 3 guidelines
-- **OMEMO Encryption**: End-to-end encryption with toggle on/off capability
-- **Voice Calling**: Built-in voice calling functionality
-- **Contact Management**: Add, remove, and manage your XMPP contacts
-- **Real-time Messaging**: Send and receive messages with encryption indicators
+- **OMEMO Encryption**: Real end-to-end encryption using libsignal-client
+- **WebRTC Voice Calling**: Peer-to-peer voice calling functionality
+- **Contact Management**: Add, remove, and manage your XMPP contacts with roster support
+- **Real-time Messaging**: Send and receive messages with live XMPP streams
 - **Cross-platform Support**: Compatible with iOS 16.0+
 
 ## Project Structure
@@ -103,10 +103,13 @@ The app follows MVVM architecture with SwiftUI:
 
 ## Dependencies
 
-Currently implemented as a standalone app with simulated XMPP functionality for demonstration. For production use, integrate with:
-- XMPPFramework (Objective-C XMPP library)
-- libsignal-protocol-swift (for OMEMO)
-- WebRTC framework (for voice calling)
+This app uses real XMPP functionality with the following dependencies:
+- **XMPPFramework**: Robust Objective-C XMPP library with Swift support
+- **libsignal-client**: Signal Protocol implementation for OMEMO encryption
+- **WebRTC**: Real-time communication framework for voice calling
+- **CocoaLumberjack**: Logging framework (XMPPFramework dependency)
+- **CocoaAsyncSocket**: TCP/IP networking (XMPPFramework dependency)
+- **KissXML**: XML parsing (XMPPFramework dependency)
 
 ## Contributing
 
