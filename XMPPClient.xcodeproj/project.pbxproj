@@ -37,6 +37,10 @@
 		A100001B294A1234567890AB /* MaterialTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTheme.swift; sourceTree = "<group>"; };
 		A100001D294A1234567890AB /* VoiceCallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceCallManager.swift; sourceTree = "<group>"; };
 		A100001F294A1234567890AB /* OMEMOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMEMOManager.swift; sourceTree = "<group>"; };
+		A1000021294A1234567890AB /* XMPPFramework */ = {isa = XCSwiftPackageProductDependency; package = A1000025294A1234567890AB /* XCRemoteSwiftPackageReference "XMPPFramework" */; productName = XMPPFramework; };
+		A1000022294A1234567890AB /* XMPPFrameworkSwift */ = {isa = XCSwiftPackageProductDependency; package = A1000025294A1234567890AB /* XCRemoteSwiftPackageReference "XMPPFramework" */; productName = XMPPFrameworkSwift; };
+		A1000023294A1234567890AB /* LibSignalClient */ = {isa = XCSwiftPackageProductDependency; package = A1000026294A1234567890AB /* XCRemoteSwiftPackageReference "libsignal-client" */; productName = LibSignalClient; };
+		A1000024294A1234567890AB /* WebRTC */ = {isa = XCSwiftPackageProductDependency; package = A1000027294A1234567890AB /* XCRemoteSwiftPackageReference "WebRTC" */; productName = WebRTC; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,10 @@
 			);
 			name = XMPPClient;
 			packageProductDependencies = (
+				A1000021294A1234567890AB /* XMPPFramework */,
+				A1000022294A1234567890AB /* XMPPFrameworkSwift */,
+				A1000023294A1234567890AB /* LibSignalClient */,
+				A1000024294A1234567890AB /* WebRTC */,
 			);
 			productName = XMPPClient;
 			productReference = A0FFFFFF294A1234567890AB /* XMPPClient.app */;
@@ -164,6 +172,11 @@
 				Base,
 			);
 			mainGroup = A0FFFFF8294A1234567890AB;
+			packageReferences = (
+				A1000025294A1234567890AB /* XCRemoteSwiftPackageReference "XMPPFramework" */,
+				A1000026294A1234567890AB /* XCRemoteSwiftPackageReference "libsignal-client" */,
+				A1000027294A1234567890AB /* XCRemoteSwiftPackageReference "WebRTC" */,
+			);
 			productRefGroup = A1000002294A1234567890AB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -406,6 +419,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A1000025294A1234567890AB /* XCRemoteSwiftPackageReference "XMPPFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/robbiehanson/XMPPFramework.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
+		A1000026294A1234567890AB /* XCRemoteSwiftPackageReference "libsignal-client" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/signalapp/libsignal-client.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.21.0;
+			};
+		};
+		A1000027294A1234567890AB /* XCRemoteSwiftPackageReference "WebRTC" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stasel/WebRTC.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A1000021294A1234567890AB /* XMPPFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1000025294A1234567890AB /* XCRemoteSwiftPackageReference "XMPPFramework" */;
+			productName = XMPPFramework;
+		};
+		A1000022294A1234567890AB /* XMPPFrameworkSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1000025294A1234567890AB /* XCRemoteSwiftPackageReference "XMPPFramework" */;
+			productName = XMPPFrameworkSwift;
+		};
+		A1000023294A1234567890AB /* LibSignalClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1000026294A1234567890AB /* XCRemoteSwiftPackageReference "libsignal-client" */;
+			productName = LibSignalClient;
+		};
+		A1000024294A1234567890AB /* WebRTC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1000027294A1234567890AB /* XCRemoteSwiftPackageReference "WebRTC" */;
+			productName = WebRTC;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A0FFFFF9294A1234567890AB /* Project object */;
 }
